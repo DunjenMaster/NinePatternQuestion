@@ -8,20 +8,24 @@ public class HollowRectangle {
         int m = 5;
 
         // Outer Loop for rows.
-        for(int i = 1; i<=n; i++)
+        for(int i = 1; i<=n;i++)
         {
-            // Inner loop for columns
-            for(int j = 1; j<=m; j++)
+            //Inner loop for columns
+            for(int j = 1; j<=m;j++)
             {
-                if (i == 1 || j == 1 || i == n || j == m)
+                //Check if we are at the first row, first column, last row or last column
+                if(i == 1 || j ==1 || i == n || j == m)
                 {
+                    // Print the asterik for the hollow rectangle
                     System.out.print(" * ");
-                }else {
+                }
+                else {
+                    // Print space for the hollow part
                     System.out.print("   ");
                 }
             }
-            System.out.println("");
+            // Print a new line after each row.
+            System.out.println("  ");
         }
-
     }
 }
